@@ -14,22 +14,24 @@
     <link href="css/idangerous.swiper.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/wo.js"></script>
+
+    <link rel="stylesheet" href="mui.min.css">
 </head>
 <body style="background-color: #fff !important;">
 <div class="warpe">
-    <div class="yhead">
-        <!--<a href="#" class="return"><i class="icon-chevron-left"></i> 返回</a>-->
-        消息
-        <a href="community_sign.html" class="search"><i class="icon-edit"></i> </a>
-    </div>
-    <!--<div class="tabs my_tab">-->
-        <!--<a href="#" hidefocus="true" class="active">聊天</a>-->
-        <!--<a href="#" hidefocus="true">回复</a>-->
+    <!--<div class="yhead">-->
+        <!--&lt;!&ndash;<a href="#" class="return"><i class="icon-chevron-left"></i> 返回</a>&ndash;&gt;-->
+        <!--消息-->
+        <!--<a href="community_sign.html" class="search"><i class="icon-edit"></i> </a>-->
     <!--</div>-->
+    <header class="mui-bar mui-bar-nav">
+        <!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+        <h1 class="mui-title">消息</h1>
+    </header>
     <div class="head head2">
         <!--<a href="#" class="return" style="color: #5f5e5e;"><i class="icon-chevron-left"></i></a>-->
         <a href="#" class="search" style="color: #5f5e5e;"><i class=""></i> </a>
-        <input type="text" placeholder="搜索标题" class="animated bounceIn zz_search">
+        <input type="text" placeholder="搜索" class="animated bounceIn zz_search">
     </div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -410,7 +412,7 @@
             </a>
         </li>
         <li class="animated bounceInLeft">
-            <a href="index.html">
+            <a href="school.html">
                 <p><i class="icon-star-empty"></i></p>
                 <span>学校</span>
             </a>
@@ -422,7 +424,7 @@
             </a>
         </li>
         <li class="animated bounceInLeft">
-            <a href="">
+            <a href="mine.html">
                 <p><i class="  icon-th-large"></i></p>
                 <span>我的</span>
             </a>
@@ -431,6 +433,8 @@
 </div>
 
 <script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+
+<script src="mui.min.js"></script>
 <script type="text/javascript">
     var tabsSwiper = new Swiper('.swiper-container',{
         speed:500,
