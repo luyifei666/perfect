@@ -194,6 +194,35 @@ body{
     -webkit-animation-delay: 1.5s; //动画延迟时间;
     -webkit-animation-duration: 2s;
 }
+
+/*陆毅飞加的star*/
+.navgrid{
+    background-color: #fff;
+    margin-top: 0.15rem;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem;
+}
+.navgrid ul li{
+    width: 30%;
+    float: left;
+    margin-left: 10%;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    line-height:1.5rem;
+}
+.navgrid ul li a{
+    margin-top: 2rem;
+    color: #8b8b8b;
+}
+.navgrid ul li img{
+    width: 100%;
+    -webkit-animation-delay: 1.5s; //动画延迟时间;
+    -webkit-animation-duration: 2s;
+}
+/*陆毅飞加的stop*/
 .center{
     height:auto;
     overflow: hidden;
