@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECahrt 示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="mui.min.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <!--App自定义的css-->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/app.css" /> -->
+    <style>
+        .chart {
+            height: 200px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        h5 {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        h5:first-child {
+            margin-top: 15px;
+        }
+    </style>
+    <script src="mui.min.js"></script>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+    <h1 class="mui-title">成绩查询</h1>
+</header>
+
+<div class="center">
+    <div class="bannerside">
+        <!--用来占位-->
+    </div>
+</div>
+
+<div class="mui-card">
+    <div class="mui-card-header">我的成绩</div>
+    <div class="mui-card-content">
+        <div class="mui-card-content-inner">
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li class="mui-table-view-cell mui-media">
+                    <div class="mui-media-body">
+                        陆毅飞
+                        <p class='mui-ellipsis'>初三年级（3）班
+                            <a class="mui-pull-right mui-ellipsis" style="color: #4b4b4b">第几次考试</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mui-card-content">
+        <div class="">
+            <div class="chart" id="pieChart"></div>
+        </div>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+                <a href="#">
+                    <div class="mui-media-body ">排名</div>
+                    <div class="mui-media " style="color: #3887f7;font-size: 20px;margin-top: 8px">
+                        49
+                        <span style="color: #f71b0f;font-size: 12px">+14</span>
+                    </div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+                <a href="#">
+                    <div class="mui-media-body">平均分</div>
+                    <div class="mui-media" style="color: #3887f7;font-size: 20px;margin-top: 8px">
+                        620
+                    </div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+                <a href="#">
+                    <div class="mui-media-body">最高分</div>
+                    <div class="mui-media " style="font-size: 20px;margin-top: 8px">
+                        700
+                    </div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+                <a href="#">
+                    <div class="mui-media-body">最低分</div>
+                    <div class="mui-media " style="font-size: 20px;margin-top: 8px">
+                        500
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="mui-card">
+    <div class="mui-card-header">详细成绩</div>
+
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">科目</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">分数</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">平均分</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">最高分</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">最低分</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">语文</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">数学</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">英语</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">政治</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">历史</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">地理</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">物理</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">化学</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+    <div class="mui-card-footer">
+        <ul class="mui-table-view mui-grid-view">
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body ">生物</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">86</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body" style="color: #3887f7">88</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">94</div>
+                </a></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-2">
+                <a href="#">
+                    <div class="mui-media-body">67</div>
+                </a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="libs/echarts-all.js"></script>
+<script>
+    var getOption = function (chartType) {
+        var dataStyle = {
+            normal: {
+                label: {show: false},
+                labelLine: {show: false}
+            }
+        };
+        var placeHolderStyle = {
+            normal: {
+                color: '#F6F6F8',//占比小的颜色
+                label: {show: false},
+                labelLine: {show: false}
+            },
+            emphasis: {
+                color: 'rgba(0,0,0,0)'
+            }
+        };
+        var chartOption = {
+            color: ['#3887f7'],
+            title: {
+                text: '599',
+                subtext: '我的成绩',
+                x: 'center',
+                y: 'center',
+                itemGap: 20,
+                textStyle: {
+                    color: 'rgba(30,144,255,0.8)',
+                    fontFamily: '微软雅黑',
+                    fontSize: 20,
+                    fontWeight: 'bolder'
+                }
+            },
+            series: [
+                {
+                    name: '1',
+                    type: 'pie',
+                    clockWise: true,
+                    radius: [55, 60],
+                    itemStyle: dataStyle,
+                    data: [
+                        {
+                            value: 68,
+                            name: '占比68%'
+                        },
+                        {
+                            value: 32,
+                            name: '占比32%',
+                            itemStyle: placeHolderStyle
+                        }
+                    ]
+                }
+            ]
+        };
+        return chartOption;
+    };
+    var byId = function (id) {
+        return document.getElementById(id);
+    };
+    var pieChart = echarts.init(byId('pieChart'));
+    pieChart.setOption(getOption('pie'));
+    byId("echarts").addEventListener('tap', function () {
+        var url = this.getAttribute('data-url');
+        plus.runtime.openURL(url);
+    }, false);
+</script>
+</body>
+
+</html>

@@ -29,3 +29,6 @@ html,body{
 	background-color: #fff!important;
 	/*color: #65ce85 !important;*/
 }
+.mui-navbar-inner{
+	background-color: #449afa;
+}

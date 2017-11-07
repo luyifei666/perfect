@@ -192,7 +192,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #007aff
+    color: #fff
 }
 
 a:active {
@@ -471,13 +471,13 @@ p {
 .mui-col-xs-3 {
     width: 25%
 }
-
+/*陆毅飞修改过，原值16.66666667*/
 .mui-col-xs-2 {
-    width: 16.66666667%
+    width: 20%
 }
-
+/*陆毅飞修改过，原值8.33333333%*/
 .mui-col-xs-1 {
-    width: 8.33333333%
+    width: 10%
 }
 
 @media (min-width: 400px) {
@@ -1259,7 +1259,7 @@ p {
     line-height: 44px;
     top: 0;
     padding: 0;
-    color: #007aff;
+    color: #fff;
     border: 0
 }
 
@@ -1295,10 +1295,10 @@ p {
 }
 
 .mui-bar .mui-icon {
-    font-size: 24px;
+    font-size: 18px;
     position: relative;
     z-index: 20;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-bottom: 10px
 }
 
