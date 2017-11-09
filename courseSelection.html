@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>成绩查询</title>
+    <title>选课情况</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -29,12 +29,13 @@
         }
     </style>
     <script src="mui.min.js"></script>
+    <script src="./js/mui.indexedlist.css"></script>
 </head>
 
 <body>
 <header class="mui-bar mui-bar-nav">
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
-    <h1 class="mui-title">成绩查询</h1>
+    <h1 class="mui-title">学校名字</h1>
 </header>
 
 <div class="centertranslate">
@@ -44,20 +45,16 @@
 </div>
 
 <div class="mui-card">
-    <div class="mui-card-header">我的成绩</div>
+    <div class="mui-card-header">选课情况</div>
+
     <div class="mui-card-content">
-        <div class="mui-card-content-inner">
-            <ul class="mui-table-view mui-table-view-chevron">
-                <li class="mui-table-view-cell mui-media">
-                    <div class="mui-media-body">
-                        陆毅飞
-                        <p class='mui-ellipsis'>初三年级（3）班
-                            <a class="mui-pull-right mui-ellipsis" style="color: #4b4b4b">第几次考试</a></p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
     </div>
+</div>
+
+<div class="mui-card">
+    <div class="mui-card-header">我的成绩</div>
+
 
     <div class="mui-card-content">
         <div class="">
@@ -66,33 +63,25 @@
     </div>
     <div class="mui-card-footer">
         <ul class="mui-table-view mui-grid-view">
-            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4">
                 <a href="#">
-                    <div class="mui-media-body ">排名</div>
-                    <div class="mui-media " style="color: #3887f7;font-size: 20px;margin-top: 8px">
-                        49
-                        <span style="color: #f71b0f;font-size: 12px">+14</span>
-                    </div>
-                </a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-3">
-                <a href="#">
-                    <div class="mui-media-body">平均分</div>
+                    <div class="mui-media-body">未选择学生</div>
                     <div class="mui-media" style="color: #3887f7;font-size: 20px;margin-top: 8px">
-                        620
+                        37人
                     </div>
                 </a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4">
                 <a href="#">
-                    <div class="mui-media-body">最高分</div>
+                    <div class="mui-media-body">已选择学生</div>
                     <div class="mui-media " style="font-size: 20px;margin-top: 8px">
-                        700
+                        4563人
                     </div>
                 </a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-3">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4">
                 <a href="#">
-                    <div class="mui-media-body">最低分</div>
+                    <div class="mui-media-body">总学生</div>
                     <div class="mui-media " style="font-size: 20px;margin-top: 8px">
-                        500
+                        4600人
                     </div>
                 </a></li>
         </ul>
@@ -366,8 +355,8 @@
         var chartOption = {
             color: ['#3887f7'],
             title: {
-                text: '599',
-                subtext: '我的成绩',
+                text: '87%',
+                subtext: '已选择',
                 x: 'center',
                 y: 'center',
                 itemGap: 20,

@@ -32,3 +32,39 @@ html,body{
 .mui-navbar-inner{
 	background-color: #449afa;
 }
+.padding00 .mui-table-view-cell > a:not(.mui-btn) {
+
+	padding: 0px 0px;
+
+}
+.mui-media-body-first{
+	margin: 0;
+	color: #dadadf !important;
+}
+.mui-media-body-orther{
+	margin: 0;
+	color: #000 !important;
+}
+.mui-col-xs-12per {
+	width: 20%
+}
+.font-size16{
+	font-size:16px !important;
+}
+.font-size14{
+	font-size:14px !important;
+}
+.font-size8{
+	font-size:4px !important;
+}
+.margin_top20{
+	margin-top: 1rem;
+}
+.backgroundcolor-commen{
+	background-color: #50acfb;
+}
+
+/*.mui-table-view.mui-grid-view .mui-table-view-cell*/
+.mui-table-view>.mui-table-view>:first-child>a  {
+	background-color: #ffff00!important;
+}

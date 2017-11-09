@@ -1443,6 +1443,16 @@ p {
     background-clip: padding-box;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .3)
 }
+.mui-card-radius10 {
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3)
+}
 
 .mui-content > .mui-card:first-child {
     margin-top: 15px
@@ -1731,16 +1741,17 @@ p {
 .mui-table-view-cell:last-child:after, .mui-table-view-cell:last-child:before {
     height: 0
 }
-
+/*删除了
+    padding: inherit;之后年级课表好使，但是我的那页不好使*/
 .mui-table-view-cell > a:not(.mui-btn) {
     position: relative;
     display: block;
     overflow: hidden;
     margin: -11px -15px;
-    padding: inherit;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: inherit
+    color: inherit;
+    padding: inherit;
 }
 
 .mui-table-view-cell > a:not(.mui-btn).mui-active {
@@ -2062,7 +2073,7 @@ p {
     padding: 10px 0 0 14px;
     text-align: center;
     vertical-align: middle;
-    background: 0 0
+    background:#fff
 }
 
 .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object {
